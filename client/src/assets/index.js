@@ -1,0 +1,1 @@
+export { default as HomeBanner } from './images/home_background.png'
