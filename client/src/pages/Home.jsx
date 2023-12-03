@@ -2,8 +2,10 @@ import React from "react";
 import { HomeBanner } from "../assets";
 import { CustomButton } from "../components";
 import { HoverButton } from "../styles";
+import {useNavigate} from 'react-router-dom'
 
 const Home = () => {
+  let navigate = useNavigate();
   return (
     <div className="w-full h-screen grid grid-cols-2 bg-[#283134]">
       <div className="flex flex-col justify-center items-start pl-[125px] text-white space-y-4">
@@ -17,6 +19,7 @@ const Home = () => {
           <CustomButton
             title="GET STARTED"
             styles={`bg-[#30dfd7] tracking-widest px-8 mt-2 ${HoverButton}`}
+            handleClick={()=>navigate("/login")}
           />
         </div>
       </div>
